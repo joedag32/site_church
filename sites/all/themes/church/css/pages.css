@@ -1,0 +1,396 @@
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+
+
+/*
+ * Body
+ */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #445b71;
+}
+
+#page-wrapper {
+  background: url(../images/contentborders.gif) repeat-y left top #fff;
+}
+
+#page {
+}
+
+/*
+ * The skip-link link will be completely hidden until a user tabs to the link.
+ * See the element-focusable rule in system.base.css.
+ */
+#skip-link a,
+#skip-link a:visited {
+  display: block;
+  width: 100%;
+  padding: 2px 0 3px 0;
+  text-align: center;
+  background-color: #666;
+  color: #fff;
+}
+
+/*
+ * Header
+ */
+#header {
+}
+
+#header .section {
+}
+
+#logo /* Wrapping link for logo */ {
+  float: left; /* LTR */
+  margin: 0;
+  padding: 0;
+}
+
+#logo img {
+  vertical-align: bottom;
+}
+
+#name-and-slogan /* Wrapper for website name and slogan */ {
+  position: absolute;
+  bottom: 46px;
+  right: 8px;
+}
+
+h1#site-name,
+div#site-name /* The name of the website */ {
+  margin: 0;
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+#site-name a:link,
+#site-name a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+#site-name a:hover,
+#site-name a:focus {
+  text-decoration: underline;
+}
+
+#site-slogan /* The slogan (or tagline) of a website */ {
+  font-family: Georgia, Arial, Times, serif;
+  font-size: 24px;
+  color:#fff;
+}
+
+.region-header /* Wrapper for any blocks placed in the header region */ {
+  clear: both; /* Clear the logo */
+}
+
+#block-menu-menu-header-navigation {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  padding-top: 5px;
+  font-family: Georgia, Arial, Times, serif;
+  font-size: 16px;
+  color: #fff;
+}
+#block-menu-menu-header-navigation.block { 
+  margin-bottom: 0;
+}
+#block-menu-menu-header-navigation ul {
+  list-style-type: none;
+  margin: 0;
+}
+#block-menu-menu-header-navigation ul.menu li {
+  display: inline;
+  padding: 0 6px;
+  border-right: 1px solid #fff;
+}
+#block-menu-menu-header-navigation ul.menu li.last {
+  border: none;
+}
+#block-menu-menu-header-navigation ul.menu li a:link, #block-menu-menu-header-navigation ul.menu li a:visited, #block-menu-menu-header-navigation ul.menu li a.active {
+  text-decoration: none;
+  color: #fff;
+}
+#block-menu-menu-header-navigation ul.menu li a:hover {
+  text-decoration: underline;
+}
+
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper {
+}
+
+#main {
+}
+
+/*
+ * Content
+ */
+#content {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#content h1 {
+  font-family: Georgia, Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: lighter;
+}
+#content a {
+  text-decoration: underline;
+  color: #003366;
+}
+#content a:hover {
+  color: #FF0000;
+  text-decoration: underline;
+}
+
+#content .section {
+}
+
+.region-highlighted {
+  padding: 10px 10px 10px 300px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  text-align: right;
+  background: url(../images/topbg.gif) repeat left top #15426c;
+  color: #fff;
+}
+.region-highlighted .block {
+  margin: 0;
+}
+.region-highlighted p {
+  margin: 0;
+}
+
+.breadcrumb /* The path to the current page in the form of a list of links */ {
+  padding-bottom: 0; /* Undo system.css */
+}
+
+h1.title, /* The title of the page */
+h2.node-title, /* Title of a piece of content when it is given in a list of content */
+h2.block-title, /* Block title */
+h2.title, /* Comment section heading */
+h2.comment-form, /* Comment form heading */
+h3.title /* Comment title */ {
+  margin: 0;
+}
+
+tr.even /* Some tables have rows marked even or odd. */ {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+tr.odd {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+div.messages /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */ {
+  margin: 1.5em 0; /* Drupal core uses "6px 0" margin */
+}
+
+div.messages ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div.status /* Normal priority messages */ {
+}
+
+div.warning,
+tr.warning /* Medium priority messages */ {
+  /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
+}
+
+div.error,
+tr.error /* High priority messages. See also the .error declaration below. */ {
+}
+
+.error /* Errors that are separate from div.messages status messages. */ {
+  /* color: #e55; */ /* Drupal core uses a #e55 background */
+}
+
+.warning /* Warnings that are separate from div.messages status messages. */ {
+  /* color: #e09010; */ /* Drupal core uses a #e09010 background */
+}
+
+div.tabs /* See also the tabs.css file. */ {
+}
+
+div.page-feature {
+  padding: 16px;
+  background-color: #15426c;
+  color: #fff;
+}
+div.page-feature p {
+  margin: 0;
+}
+div.page-feature img {
+  margin: 12px 6px 0 6px;
+}
+
+.region-help /* Help text on a page */ {
+}
+
+.more-help-link /* Link to more help */ {
+}
+
+.region-content /* Wrapper for the actual page content */ {
+}
+
+ul.links /* List of links */ {
+}
+
+ul.links.inline {
+  display: block; /* Let the links be inline, but the container be a block. */
+}
+
+ul.links li {
+  padding: 0 1em 0 0; /* LTR */
+}
+
+.item-list .pager /* A list of page numbers when more than 1 page of content is available */ {
+  padding: 0;
+}
+
+.item-list .pager li /* Each page number in the pager list */ {
+  padding: 0 0.5em;
+}
+
+.feed-icon /* The link to the RSS or Atom feed for the current list of content */ {
+}
+
+.more-link /* Aggregator, blog, and forum more link */ {
+}
+
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+.region-sidebar-first {
+}
+.region-sidebar-first h3 {
+  margin: .2em 0 0.8em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.4em;
+  line-height: 1em;
+}
+
+.region-sidebar-first .section {
+}
+
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+.region-sidebar-second {
+}
+
+.region-sidebar-second .section {
+}
+.region-sidebar-first h2 {
+  font-size: 1.1em;
+  color: #0c4378;
+}
+.region-sidebar-first ul {
+  margin: .8em 0;
+}
+.region-sidebar-first li {
+  font-size: .9em;
+}
+#block-block-11 {
+  margin: 0 -20px 0 0;
+  padding: 8px;
+  font-size: .8em;
+  background-color: #0c4378;
+  border: none;
+  color: #fff;
+}
+#block-block-11 table {
+  margin: 0 0 8px 8px;
+}
+#block-block-11 p, #block-block-11 td {
+  margin: 0;
+  line-height: 1.2em;
+}
+#block-block-11 p {
+  margin: 0 0 0 8px;
+}
+#block-block-11 a:link, #block-block-11 a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+#block-block-11 a:hover, #block-block-11 a:active {
+  text-decoration: underline;
+}
+
+/*
+ * Footer
+ */
+.region-footer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+}
+.region-footer a:link, .region-footer a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+.region-footer a:hover, .region-footer a:active {
+  text-decoration: underline;
+}
+.region-footer #block-block-1 {
+  padding-top: 15px;	
+}
+.region-footer #block-block-1.block {
+  margin: 0;
+}
+.region-footer p {
+  margin: .8em;
+  text-align: center;
+}
+#block-system-user-menu.block {
+  margin: 0;
+}
+#block-system-user-menu ul {
+  margin: 0;
+  text-align: center;
+}
+#block-system-user-menu li {
+  display: inline;
+}
+#block-system-user-menu li a {
+  text-decoration: none;
+  color: #fff;
+}
+#block-system-user-menu li a:hover {
+  text-decoration: underline;
+}
+#block-block-10.block {
+  margin: 0;
+}
+#block-system-user-menu .menu li {
+  padding-right: 6px;
+  padding-left: 3px;
+  border-right: 1px solid #fff;
+}
+#block-system-user-menu .menu li.last {
+  border: none;
+}
+
+/*
+ * Page bottom
+ */
+.region-bottom /* Wrapper for any blocks placed in the page bottom region */ {
+}
